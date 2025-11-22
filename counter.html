@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        div{
+            display: flex;
+            gap: 20px;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>this is a practice work</h1>
+    <p id="value">0</p>
+    <button onclick="increaseValue()">increase</button>
+    <button onclick="decreaseValue()">decrease</button>
+    <button onclick="rest()">reset</button><br><br>
+    <button onclick="Mode()">Light</button>
+    
+    <script>
+        let count=0;
+        function increaseValue(){
+
+           count++;
+           document.getElementById('value').innerHTML=count;
+        }
+             function decreaseValue(){
+
+           count--;
+           document.getElementById('value').innerHTML=count;
+        }
+             function rest(){
+
+           count=0;
+           document.getElementById('value').innerHTML=count;
+        }
+        let theme="light";
+        function Mode(){
+            if(theme==="light"){
+                theme="dark";
+                document.body.style.backgroundColor="black";
+                document.body.style.color="white";
+                
+            }else{
+               theme="light";
+                document.body.style.backgroundColor="white";
+                document.body.style.color="black";
+            }
+        }
+    </script>
+</body>
+</html>

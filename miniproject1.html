@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miniproject</title>
+</head>
+<body>
+    
+
+<h1>Day 18 - JavaScript Objects Practice</h1>
+
+<h2>Task 1: Student Object</h2>
+<p id="studentInfo"></p>
+
+<h2>Task 2: Product Discount</h2>
+<p id="productInfo"></p>
+
+<hr>
+
+<h2>Task 3: Show Object Details (Mini Project)</h2>
+<button onclick="showStudent()">Show Student</button>
+<button onclick="showTeacher()">Show Teacher</button>
+<button onclick="showCar()">Show Car</button>
+
+<p id="result"></p>
+<script>
+    let student={
+      name:'khalid',
+       age:'21',
+       address:'pakistan'   }
+       document.getElementById('studentInfo').innerHTML=`name=${student.name}<br>age=${student.age}<br>address:${student.address}`;
+       let products={
+        name:'mobile',
+        price:'50000',
+        discount:'10',
+        
+       };
+        let finalPrice = products.price - (products.price * products.discount / 100);
+        document.getElementById('productInfo').innerHTML=`ProductName:${products.name}<br>ProductPrice:${products.price}<br>Discount:${products.discount}%<br>FinalPrice:${finalPrice}`;
+       let Teacher={
+        name:'Mureed',
+        age:'30',
+        subject:'Physics',
+        cnic:'332552443434',
+        mobile:'03011277269'
+       }
+       let car={
+        name:'toyata',
+        price:'2500000',
+        model:'2025',
+        color:'white'
+       }
+       function showTeacher(){
+        document.getElementById("result").innerHTML=`Name:${Teacher.name}<br>Age:${Teacher.age}<br>Subject:${Teacher.subject}<br>Cnic:${Teacher.cnic}<br>Mobile:${Teacher.mobile}`;
+       }
+         function showStudent(){
+        document.getElementById("result").innerHTML=`Name:${student.name}<br>Age:${student.age}<br>Address:${Teacher.address}`;
+       }
+         function showCar(){
+        document.getElementById("result").innerHTML=`Name:${car.name}<br>Price:${car.price}<br>Model:${car.model}<br>Color:${car.color}`;
+       }
+</script>
+</body>
+</html>

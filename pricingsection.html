@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Cards</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            background: linear-gradient(to bottom,blue,rgb(180, 11, 11));
+            text-align: center;
+        }
+        h1{
+            color: red;
+            text-align: center;
+        }
+        .pricing-container{
+            display: flex;
+            align-items: center;
+           justify-content: center;
+            gap: 20px;
+            padding: 10px;
+        }
+        .card{
+            border-radius: 20px;
+            border: 3px solid lightpink;
+            height: 400px;
+            width: 300px;
+        }
+        .featured{
+            background-color: blue;
+        }
+        button{
+            margin: 30px auto;
+            border-radius: 20px;
+            height: 30px;
+            width: 100px;
+            background: linear-gradient(to left, green,blue);
+            border: none;
+            font-weight: bold;
+            color: white;
+        }
+        li{
+            list-style: none;
+            color: white;
+        }
+        #price{
+            color: green;
+            font-weight: bold;
+        }
+        #price1{
+            color: red;
+        }
+        .card:hover{
+            transform: scale(1.1);
+            box-shadow: 0px 0px 20px red;
+        }
+        button:hover{
+            transform: scale(1.1);
+        }
+         @media screen and (max-width: 480px){
+            .pricing-container{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                
+            }
+         }
+    </style>
+</head>
+<body>
+    <div class="pricing-section">
+  <h1>Choose Your Plan</h1>
+
+  <div class="pricing-container">
+
+    <div class="card">
+      <h2>Basic</h2>
+      <h3 id="price">$9 / month</h3>
+      <ul>
+        <li>✔ Feature One</li>
+        <li>✔ Feature Two</li>
+        <li>✔ Feature Three</li>
+      </ul>
+      <button>Select Plan</button>
+    </div>
+
+    <div class="card featured">
+      <h2>Standard</h2>
+      <h3 id="">$19 / month</h3>
+      <ul>
+        <li>✔ Feature One</li>
+        <li>✔ Feature Two</li>
+        <li>✔ Feature Three</li>
+        <li>✔ Extra Feature</li>
+      </ul>
+      <button class="btn-featured">Select Plan</button>
+    </div>
+
+    <div class="card">
+      <h2>Premium</h2>
+      <h3 id="price1">$29 / month</h3>
+      <ul>
+        <li>✔ Feature One</li>
+        <li>✔ Feature Two</li>
+        <li>✔ Feature Three</li>
+        <li>✔ Extra Feature</li>
+      </ul>
+      <button>Select Plan</button>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

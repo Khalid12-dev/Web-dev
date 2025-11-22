@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+      body{
+        font-family: 'Times New Roman', Times, serif;
+        margin: 0px;
+        padding: 0px;
+        background: linear-gradient(to bottom,red,cyan,blue);
+        background-repeat: no-repeat;
+
+      }
+      .testimonial-container {
+  overflow: hidden;
+}
+      .slider{
+        display: flex;
+        padding: 20px;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+         animation: slide 12s infinite;
+         
+      }
+      .card{
+        border: 2px solid cyan;
+        box-shadow: 0px 0px 10px cyan;
+        border-radius: 20px;
+         width: 100%;
+  
+         transition: transform 0.3s ease;
+      }
+      img{
+        width: 400px;
+        border-radius: 20px;
+      }
+      h3{
+          text-align: center;
+          color: red;
+          font-weight:bold ;
+
+      }
+      h1{
+        text-align: center;
+        color: rgb(0, 140, 255);
+        font-style: oblique;
+        text-decoration: underline red;
+      }
+      p{
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+      }
+      .stars{
+        text-align: center;
+        font-size: 40px;
+      }
+         .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 20px #00bcd4;
+    }
+   @keyframes slide {
+      0% { transform: translateX(0%); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0%); }
+    }
+    @media screen and (max-width: 480px){
+      .slider{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      img{
+        width: 410px;
+      }
+    }
+    </style>
+</head>
+<body>
+    
+  <div class="testimonial-container">
+    <h1>TestmonialSlider</h1>
+    <div class="slider">
+      <div class="card">
+        <img src="5.jpg" alt="User 1">
+        <h3>John Doe</h3>
+        <p>"This is the best service I have ever used. Highly recommended!"</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="card">
+        <img src="7.jpg" alt="User 2">
+        <h3>Jane Smith</h3>
+        <p>"Amazing experience, very professional and fast service."</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="card">
+        <img src="2.jpg" alt="User 3">
+        <h3>Mark Wilson</h3>
+        <p>"I loved the product quality and the support team was excellent."</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

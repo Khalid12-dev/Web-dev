@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Day 16 - JavaScript Events Practice</h1>
+
+    <!-- Task 1 -->
+    <h2>Task 1: Change Background Color</h2>
+    <select id="colorSelect" onchange="changeColor()">
+        <option value="">Select Color</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+        <option value="black">Black</option>
+        <option value="white">White</option>
+    </select>
+
+    <hr>
+
+    <!-- Task 2 -->
+    <h2>Task 2: Increase / Decrease Text Size</h2>
+    <p id="textPara">This is sample text...</p>
+    <button onclick="increaseSize()">Increase</button>
+    <button onclick="decreaseSize()">Decrease</button>
+
+    <hr>
+
+    <!-- Task 3 -->
+    <h2>Task 3: Show / Hide Password</h2>
+    <input type="password" id="pass" placeholder="Enter password">
+    <button onclick="togglePass()">Show / Hide</button>
+    <script>
+        function changeColor(){
+            let color=document.getElementById('colorSelect').value;
+            document.body.style.backgroundColor=color;
+        
+        }
+        let size=16;
+        function increaseSize(){
+            size+=2
+            document.getElementById('textPara').style.fontSize=size+"px";
+            
+        }
+        function decreaseSize(){
+            if(size>10){
+                size-=2;}
+                document.getElementById('textPara').style.fontSize=size + "px"
+            
+        }
+        function togglePass(){
+            let pass=document.getElementById('pass');
+            if(pass.type==="password"){
+                pass.type="text";
+            }
+            else{
+                pass.type="password"
+            }
+        }
+    </script>
+</body>
+</html>

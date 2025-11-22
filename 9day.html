@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14 JS Calculator</title>
+</head>
+<body>
+    <h1>Day 14 - JavaScript Calculator</h1>
+
+    <script>
+        let num1 = Number(prompt("Enter the first number:"));
+        let num2 = Number(prompt("Enter the second number:"));
+        let operation = prompt("Enter operation (+, -, *, /):");
+
+        // Complete the code below to perform the calculation
+        let result;
+
+        // Your if/else or switch logic here
+        if(operation==='+'){
+            result=num1+num2;
+        }
+        else if(operation==='-'){
+            result=num1-num2;
+        }
+         else if(operation==='*'){
+            result=num1*num2;
+        }
+         else if(operation==='/'){
+            result=num1/num2;
+        }
+
+        document.writeln("Result: " + result);
+    </script>
+</body>
+</html>

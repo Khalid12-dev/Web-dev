@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        
+<h1>Day 19 - JavaScript Function Practice</h1>
+
+<!-- Task 1 -->
+<h2>Task 1: Add Two Numbers</h2>
+<input type="number" id="num1" placeholder="Enter first number">
+<input type="number" id="num2" placeholder="Enter second number">
+<button onclick="addNumbers()">Add</button>
+<p id="addResult"></p>
+
+<!-- Task 2 -->
+<h2>Task 2: Even or Odd</h2>
+<input type="number" id="checkNum" placeholder="Enter a number">
+<button onclick="checkEvenOdd()">Check</button>
+<p id="evenOddResult"></p>
+
+<hr>
+
+<!-- Task 3 -->
+<h2>Task 3: Mini Calculator</h2>
+<input type="number" id="calc1" placeholder="Number 1">
+<input type="number" id="calc2" placeholder="Number 2">
+
+<br><br>
+<button onclick="calculate('add')">Add</button>
+<button onclick="calculate('sub')">Subtract</button>
+<button onclick="calculate('mul')">Multiply</button>
+<button onclick="calculate('div')">Divide</button>
+
+<p id="calcResult"></p>
+<script>
+    function addNumbers(){
+        let a=parseFloat(document.getElementById("num1").value);
+        let b=parseFloat(document.getElementById("num2").value);
+        let sum=a+b;
+        document.getElementById("addResult").innerHTML= + sum;
+    }
+    function checkEvenOdd(){
+        let num=document.getElementById("checkNum").value;
+        if(num%2===0){
+            document.getElementById("evenOddResult").innerHTML= num +" is even"
+        }
+        else{
+            document.getElementById("evenOddResult").innerHTML= num +" is odd"
+        }
+    }
+    function calculate(operations){
+         let x=parseFloat(document.getElementById("calc1").value);
+        let y=parseFloat(document.getElementById("calc2").value);
+        let result="";
+        if (operations==="add") result=x+y;
+        else if(operations==="sub") result=x-y;
+          else if(operations==="mul") result=x*y;
+            else if(operations==="div") result=x/y;
+            document.getElementById("calcResult").innerHTML="results:" + result
+    }
+</script>
+</body>
+</html>

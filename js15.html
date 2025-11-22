@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15 Todo App</title>
+</head>
+<body>
+
+    <h1>Todo List - Day 15</h1>
+
+    <input type="text" id="taskInput" placeholder="Enter your task">
+    <button onclick="addTask()">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+<script>
+
+    function addTask() {
+        let task1 = document.getElementById('taskInput').value;
+
+      if(task1.trim()===''){
+        alert('please input a task');
+        return;
+      }
+      let li=document.createElement("li");
+      let text=document.createElement("span");
+      text.textContent=task1;
+      text.style.color="blue";
+      text.style.fontSize="20px"
+      text.style.margin="15px"
+      let btn=document.createElement("button");
+      btn.textContent="delete";
+      btn.style.fontSize="20px";
+      btn.onclick=function(){
+        li.remove();
+      }
+    li.appendChild(text);
+    li.appendChild(btn);
+    li.style.listStyle="none"
+    document.getElementById("taskList").appendChild(li);
+    document.getElementById("taskInput").value="";
+    }
+
+</script>
+
+</body>
+</html>
